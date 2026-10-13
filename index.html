@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#202923">
+  <meta name="description" content="A little family album. Fifty-five years, countless memories, and so much love.">
+  <title>55 years of you · For Dad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead"><a href="#welcome" aria-label="Back to the birthday page">For Dad<span class="little-star">✳</span></a><span>A little album, a lot of love</span><button id="open-chapters" aria-label="Choose a chapter">Chapters <span aria-hidden="true">☰</span></button></header>
+  <main id="album" tabindex="-1" aria-label="Dad's birthday album">
+    <section class="chapter hero" id="welcome" aria-labelledby="birthday-title">
+      <div class="hero-inner">
+        <div class="hero-copy"><p class="eyebrow">With love, from all of us</p><h1 id="birthday-title">Happy <span class="birthday-number">55<span class="ordinal">th</span><span class="number-star" aria-hidden="true">✳</span></span>birthday, Dad.</h1><p class="intro">A lifetime of little moments.<br>A whole family of love for you.</p><button class="begin" data-go="1">Let’s turn the pages <span aria-hidden="true">↓</span></button></div>
+        <div class="hero-art" aria-label="Family photo placeholders">
+          <div class="polaroid back"><div class="mini-scene"><span aria-hidden="true">✦</span></div><p>the little moments</p></div>
+          <div class="polaroid front"><div class="cover-photo"><svg viewBox="0 0 320 340" aria-hidden="true"><circle cx="238" cy="85" r="37" fill="#ebd9aa"/><path d="M0 240 Q100 140 210 250 T390 220 V340 H0Z" fill="#7c8b71"/><path d="M0 292 Q130 205 320 280 V340 H0Z" fill="#4c6452"/><path d="M152 249 L152 181 M174 249 L174 166 M196 249 L196 184" stroke="#e9dfc9" stroke-width="12" stroke-linecap="round"/><circle cx="152" cy="166" r="12" fill="#e9dfc9"/><circle cx="174" cy="147" r="14" fill="#e9dfc9"/><circle cx="196" cy="168" r="12" fill="#e9dfc9"/><path d="M151 198 L175 186 L197 202" stroke="#e9dfc9" stroke-width="7" fill="none" stroke-linecap="round"/></svg><span>Our favorite photos go here</span></div><p>so much life. so much love. <span>♡</span></p></div>
+          <span class="hand-note">our favorite person <span aria-hidden="true">↗</span></span>
+        </div>
+      </div><div class="section-foot"><span>55 years of you</span><button data-go="1">Swipe up to begin <span aria-hidden="true">↓</span></button><span>Made with love ♡</span></div>
+    </section>
+    <div id="memory-chapters"></div>
+    <section class="chapter closing" id="with-love" aria-labelledby="closing-title"><div class="closing-inner"><p class="eyebrow">Today, and every day</p><span class="closing-star" aria-hidden="true">✳</span><h2 id="closing-title">You are<br><em>so loved.</em></h2><p>Happy 55th birthday, Dad.</p><p>We appreciate you. We’re thinking of you.<br>And we’re here with you, through it all.</p><div class="signoff">All our love, always.<span>Your family ♡</span></div><button class="begin" data-go="0">Back to the beginning <span aria-hidden="true">↑</span></button></div></section>
+  </main>
+  <nav class="chapter-rail" aria-label="Album chapters"></nav>
+  <dialog id="chapter-menu"><div class="menu-top"><p class="eyebrow">The pages of your life</p><button id="close-chapters" aria-label="Close chapter menu">×</button></div><h2>Every chapter.<br><em>All our love.</em></h2><nav id="chapter-links" aria-label="Choose a chapter"></nav></dialog>
+  <div id="announcement" class="sr-only" aria-live="polite"></div>
+  <script src="memories.js"></script><script src="app.js"></script>
+</body>
+</html>
