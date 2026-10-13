@@ -10,6 +10,17 @@ const make = (tag, className, content) => {
   return element;
 };
 const galleries = [];
+// Small ink marks for his interests, independent of the photos or their dates.
+const hobbyIds = ['golf', 'cooking', 'f1'];
+function hobbyIcon(hobby) {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.classList.add('hobby-icon');
+  svg.setAttribute('aria-hidden', 'true');
+  const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+  use.setAttribute('href', `#hobby-${hobby}`);
+  svg.append(use);
+  return svg;
+}
 window.MEMORIES.forEach((memory, chapterIndex) => {
   const section = make('section', 'chapter memory');
   section.id = memory.id;
@@ -51,7 +62,9 @@ window.MEMORIES.forEach((memory, chapterIndex) => {
       figure.append(img);
     } else figure.append(placeholder());
     figure.append(make('figcaption', '', photo.caption));
-    slide.append(figure, make('p', 'photo-detail', photo.detail));
+    const detail = make('p', 'photo-detail');
+    detail.append(hobbyIcon(hobbyIds[index % hobbyIds.length]), make('span', '', photo.detail));
+    slide.append(figure, detail);
     track.append(slide);
     const dot = make('button');
     dot.setAttribute('aria-label', `Go to photo ${index + 1}: ${photo.caption}`);
