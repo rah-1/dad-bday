@@ -123,7 +123,7 @@ chapters.forEach((chapter, index) => {
   dot.onclick = () => goChapter(index, true);
   document.querySelector('.chapter-rail').append(dot);
   const link = make('button');
-  link.append(make('span', '', index === 0 ? '♡' : index === chapters.length - 1 ? '✳' : window.MEMORIES[index - 1].age), document.createTextNode(labels[index]));
+  link.append(make('span', '', index === 0 ? '♡' : index === chapters.length - 1 ? '♡' : window.MEMORIES[index - 1].age), document.createTextNode(labels[index]));
   link.onclick = () => { menu.close(); goChapter(index, true); };
   document.querySelector('#chapter-links').append(link);
 });
