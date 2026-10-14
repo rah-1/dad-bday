@@ -157,6 +157,7 @@ for group in GROUPS:
     group['photos'] = photos
 assert len(used) == len(set(used)) == 55, 'The album must contain 55 unique photos.'
 selected_files = {Path(photo['src']).name for group in GROUPS for photo in group['photos']}
+selected_files.add('cats-cover.jpg')  # Separate, user-supplied back-cover image.
 # Prune only obsolete generated web copies; source folders are never touched.
 for generated in output.glob('*.jpg'):
     if generated.name not in selected_files:
