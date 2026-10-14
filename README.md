@@ -1,17 +1,29 @@
 # For Dad — 55 years of you
 
-A mobile-first birthday album, inspired by the full-screen scroll chapters in `../kirti-birthday`. Swipe up/down through the chapters and left/right through each chapter’s photos. Arrow buttons, the Chapters menu, and keyboard navigation are also available. The copy celebrates Dad and offers support without assuming an outcome for his father.
+A mobile-first birthday album with 55 unique family photographs. Swipe vertically through chapters and horizontally through photos. Buttons, chapter navigation, photo counters, and keyboard navigation are also available.
 
-## Preview
+Live site: https://rah-1.github.io/dad-bday/
 
-From this folder, run `node server.js`, then visit http://localhost:5173. A phone on the same Wi-Fi can use your computer’s local IP address with port 5173, if your firewall allows it. The site is static and can also be opened directly via `index.html` or uploaded to static hosting.
+## Photo curation
 
-## Add the family photos
+Groups follow the original alphabetical filename sequence provided by the family:
 
-1. Put your images in `photos/` (for example `photos/childhood-01.jpg`).
-2. Open `memories.js`. Change a photo’s `src: ''` to `src: 'photos/childhood-01.jpg'`.
-3. Write its `alt`, `caption`, and `detail`. The current captions are collection prompts, not factual memories.
+| Chapter | Original group | Included |
+| --- | --- | --- |
+| Formative years & family | First 10 | 10 |
+| Life at Asha Kiran | Next 19 | 16 |
+| College life | Next 7 | 7 |
+| US ready | Next 5 | 5 |
+| Thatha | Next 5 | 5 |
+| Our family | Last 13 | 12 |
+| Total | 59 | 55 |
 
-Each chapter has three placeholders. Add/remove photo objects to change the count; controls update automatically. Change chapter titles, messages, and age ranges in the same file. Use `style.css` to adjust colors or layout. Photos use a cropped 4:3 frame (wider on short phones); crop beforehand or change `object-fit` if a particular picture needs its full frame.
+Within groups, photos are arranged for narrative flow, without claiming exact dates. Thatha's chapter uses present, affectionate language. Omitted originals remain untouched: IMG_8321.jpg, IMG_8325.jpg, and IMG_8329.jpg overlap with other Asha Kiran portraits/gatherings; IMG_8366.jpg is a softer family snapshot overlapping with the other sibling photos.
 
-Google Fonts enhance the typography when online; system fonts are used offline. No analytics, uploads, accounts, or backend are required.
+scripts/prepare_photos.py records the selection, order, captions, alt text, and rotation corrections. Run it with Python and Pillow to regenerate memories.js and photos/web/. Web copies are upright, resized to a maximum 1600 pixels, and saved without EXIF metadata. Original JPGs in photos/ stay local and are ignored by Git. Only the selected 55 web copies are published. The two cover photos reuse selections from the album.
+
+## Preview and updates
+
+Run node server.js and visit http://localhost:5173. The site is static; pushing main updates GitHub Pages. When changing assets, update version query strings in index.html to refresh cached CSS and scripts.
+
+Gallery photos use object-fit: contain to preserve the full photograph. Google Fonts enhance typography online, with system fallbacks offline. No analytics, uploads, accounts, or backend are required.

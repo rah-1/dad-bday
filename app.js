@@ -32,7 +32,7 @@ window.MEMORIES.forEach((memory, chapterIndex) => {
   const heading = make('h2', '', memory.title);
   heading.id = `${memory.id}-title`;
   heading.append(make('br'), make('em', '', memory.emphasis));
-  copy.append(number, make('p', 'eyebrow', `Ages ${memory.age} · ${memory.label}`), heading, make('p', 'message', memory.message), make('p', 'handwritten', memory.note));
+  copy.append(number, make('p', 'eyebrow', `Chapter ${String(chapterIndex + 1).padStart(2, '0')} · ${memory.label}`), heading, make('p', 'message', memory.message), make('p', 'handwritten', memory.note));
   const gallery = make('div', 'photo-album');
   const track = make('div', 'photo-track');
   track.tabIndex = 0;
@@ -40,7 +40,9 @@ window.MEMORIES.forEach((memory, chapterIndex) => {
   track.setAttribute('role', 'region');
   track.setAttribute('aria-roledescription', 'carousel');
   track.setAttribute('aria-label', `${memory.label} photos. Swipe left or right, or use the arrow keys.`);
-  const dots = make('div', 'photo-dots');
+  const position = make('span', 'photo-position');
+  position.setAttribute('aria-live', 'polite');
+  position.setAttribute('aria-atomic', 'true');
   memory.photos.forEach((photo, index) => {
     const slide = make('div', 'photo-slide');
     slide.setAttribute('role', 'group');
@@ -66,10 +68,6 @@ window.MEMORIES.forEach((memory, chapterIndex) => {
     detail.append(hobbyIcon(hobbyIds[index % hobbyIds.length]), make('span', '', photo.detail));
     slide.append(figure, detail);
     track.append(slide);
-    const dot = make('button');
-    dot.setAttribute('aria-label', `Go to photo ${index + 1}: ${photo.caption}`);
-    dot.addEventListener('click', () => goPhoto(index));
-    dots.append(dot);
   });
   let current = 0;
   const goPhoto = (index) => {
@@ -89,7 +87,8 @@ window.MEMORIES.forEach((memory, chapterIndex) => {
       const delta = Math.abs(slide.offsetLeft - start - track.scrollLeft);
       if (delta < distance) { distance = delta; current = index; }
     });
-    [...dots.children].forEach((dot, index) => dot.setAttribute('aria-current', String(index === current)));
+    position.textContent = `${String(current + 1).padStart(2, '0')} / ${String(track.children.length).padStart(2, '0')}`;
+    position.setAttribute('aria-label', `Photo ${current + 1} of ${track.children.length}`);
     prev.disabled = current === 0; next.disabled = current === track.children.length - 1;
   };
   track.addEventListener('scroll', update, { passive: true });
@@ -98,7 +97,7 @@ window.MEMORIES.forEach((memory, chapterIndex) => {
       event.preventDefault(); event.stopPropagation(); goPhoto(current + (event.key === 'ArrowRight' ? 1 : -1));
     }
   });
-  controls.append(prev, dots, next); gallery.append(track, controls);
+  controls.append(prev, position, next); gallery.append(track, controls);
   inner.append(copy, gallery);
   const footer = make('div', 'memory-footer');
   const onward = make('button', '', chapterIndex === window.MEMORIES.length - 1 ? 'One more page ↓' : 'Next chapter ↓');
@@ -123,7 +122,7 @@ chapters.forEach((chapter, index) => {
   dot.onclick = () => goChapter(index, true);
   document.querySelector('.chapter-rail').append(dot);
   const link = make('button');
-  link.append(make('span', '', index === 0 ? '♡' : index === chapters.length - 1 ? '♡' : window.MEMORIES[index - 1].age), document.createTextNode(labels[index]));
+  link.append(make('span', '', index === 0 || index === chapters.length - 1 ? '♡' : String(index).padStart(2, '0')), document.createTextNode(labels[index]));
   link.onclick = () => { menu.close(); goChapter(index, true); };
   document.querySelector('#chapter-links').append(link);
 });
