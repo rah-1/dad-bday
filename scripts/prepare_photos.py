@@ -73,14 +73,78 @@ GROUPS = [
         (8362,'And always, you','A smiling man in traditional white clothing standing indoors.')]),
 ]
 
+# Mom's editing notes refer to the original album positions, before these moves.
+by_id = {group['id']: group for group in GROUPS}
+roots, asha, college, us, thatha, family = [by_id[key] for key in (
+    'formative-years', 'asha-kiran', 'college-life', 'us-ready', 'thatha', 'our-family')]
+
+def relabel(group, number, caption):
+    group['photos'] = [(key, caption if key == number else text, alt) for key, text, alt in group['photos']]
+
+def move(source, destination, number):
+    record = next(photo for photo in source['photos'] if photo[0] == number)
+    source['photos'].remove(record)
+    destination['photos'].append(record)
+
+relabel(roots, 8309, 'Some of My Fav People')
+relabel(asha, 8322, 'Friends')
+relabel(asha, 8332, 'A Moment of Strength')
+relabel(asha, 8324, 'Neighbors')
+relabel(college, 8339, 'Thread Ceremony')
+relabel(us, 8346, 'Landed in the US')
+relabel(us, 8347, 'A Sacred Moment')
+for number in (8334, 8333):  # Asha Kiran's old 01/16 and 15/16.
+    move(asha, roots, number)
+for number in (8350, 8351):  # Thatha's old 04/05 and 05/05.
+    move(thatha, roots, number)
+    relabel(roots, number, 'Side by side' if number == 8350 else 'A family celebration')
+relabel(roots, 8334, 'Family, all together')
+
+roots.update(label='My Roots', title='My', emphasis='roots.',
+    message='The people who came before us. The faces, traditions, and everyday moments that made this family ours.',
+    note='Our story starts with them.')
+roots['photos'] = [
+    ('f-and-L/2_Vittu_Raghu_Paddy_Seetha.jpg', 'Our roots', 'A black-and-white family portrait of two young men standing behind a seated man and woman.'),
+    ('first-chap/IMG_7013.jpg', 'The people at the beginning', 'A black-and-white portrait of a man and woman wearing glasses.'),
+    ('first-chap/IMG-20200417-WA0004.jpg', 'The early years, together', 'An older black-and-white family photograph outdoors.'),
+    ('first-chap/IMG-20200418-WA0023.jpg', 'A little moment from home', 'A black-and-white photograph of an older woman standing with two children outdoors.'),
+    ('first-chap/20140702_203217.jpg', 'A little music', 'An old family photograph of a woman playing a stringed instrument with a child beside her.'),
+] + roots['photos']
+
+# Keep the newly supplied images and all explicitly moved/relabelled photos.
+# Replace older overlapping music/portrait shots and similar childhood pictures.
+OMITTED_FOR_REPLACEMENTS = {8306, 8311, 8312, 8314, 8315, 8327, 8354, 8355, 8358, 8359, 8364}
+for group in GROUPS:
+    group['photos'] = [photo for photo in group['photos'] if photo[0] not in OMITTED_FOR_REPLACEMENTS]
+dog = next(photo for photo in asha['photos'] if photo[0] == 8323)
+asha['photos'].remove(dog)
+asha['photos'].insert(0, dog)
+
+# Replace the old final family photo (8362) with the new family group photograph.
+family['photos'] = [photo for photo in family['photos'] if photo[0] != 8362]
+family['photos'] += [
+    ('last-but-one/upe5191.jpg', 'Three generations, one frame', 'A woman and child seated beside an older woman.'),
+    ('last-but-one/paati-rahul-4.jpg', 'Held with love', 'An older woman holding a small child.'),
+    ('last-but-one/05.jpg', 'All the generations', 'Women and children gathered together on a sofa.'),
+    ('last-but-one/23.jpg', 'A lap full of memories', 'Two older women smiling together with three children.'),
+    ('last-but-one/test.jpg', 'A little birthday love', 'Two grandparents holding a small child in front of a birthday banner.'),
+    ('last-but-one/DSC05655.JPG', 'Our family, together', 'A family group smiling together indoors.'),
+    ('f-and-L/IMG_3974.JPG', 'One more lap, one more memory', 'A person in a racing suit standing beside a blue number 2 NASCAR car at a racetrack.'),
+]
+thatha.update(title='Our roots.', emphasis='Our love.',
+    message='Thatha, so much of our family’s story begins with you. These photographs hold moments we’re grateful to share, and love that brings us together. We’re thinking of you, wishing you comfort and strength, and holding you close in our hearts.',
+    note='With all our love, Thatha.')
+GROUPS = [roots, asha, us, college, family, thatha]
+
 output = ROOT / 'photos' / 'web'
 output.mkdir(exist_ok=True)
 used = []
 for group in GROUPS:
     photos = []
     for number, caption, alt in group['photos']:
-        filename = f'IMG_{number}.jpg'
-        with Image.open(ROOT / 'photos' / filename) as source:
+        source_path = Path(f'IMG_{number}.jpg') if isinstance(number, int) else Path(number)
+        filename = f'IMG_{number}.jpg' if isinstance(number, int) else source_path.parent.name + '-' + source_path.stem + '.jpg'
+        with Image.open(ROOT / 'photos' / source_path) as source:
             image = ImageOps.exif_transpose(source).convert('RGB')
             if number in ROTATE_LEFT:
                 image = image.rotate(90, expand=True)
@@ -92,6 +156,11 @@ for group in GROUPS:
         used.append(number)
     group['photos'] = photos
 assert len(used) == len(set(used)) == 55, 'The album must contain 55 unique photos.'
+selected_files = {Path(photo['src']).name for group in GROUPS for photo in group['photos']}
+# Prune only obsolete generated web copies; source folders are never touched.
+for generated in output.glob('*.jpg'):
+    if generated.name not in selected_files:
+        generated.unlink()
 (ROOT / 'memories.js').write_text('// 55 curated photos. Generated by scripts/prepare_photos.py.\nwindow.MEMORIES = ' + json.dumps(GROUPS, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
 print('Prepared 55 photos:', ', '.join(f"{g['label']}: {len(g['photos'])}" for g in GROUPS))
 print(f'Web images: {sum(p.stat().st_size for p in output.glob("*.jpg"))/1024/1024:.1f} MB. Originals unchanged.')

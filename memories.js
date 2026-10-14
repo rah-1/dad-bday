@@ -2,71 +2,101 @@
 window.MEMORIES = [
   {
     "id": "formative-years",
-    "label": "Formative years & family",
-    "title": "Where it all",
-    "emphasis": "began.",
-    "message": "The first pages of your story, and the family woven through them. So much life, held in these little photographs.",
-    "note": "The people at the beginning.",
+    "label": "My Roots",
+    "title": "My",
+    "emphasis": "roots.",
+    "message": "The people who came before us. The faces, traditions, and everyday moments that made this family ours.",
+    "note": "Our story starts with them.",
     "photos": [
+      {
+        "src": "photos/web/f-and-L-2_Vittu_Raghu_Paddy_Seetha.jpg",
+        "alt": "A black-and-white family portrait of two young men standing behind a seated man and woman.",
+        "caption": "Our roots",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/first-chap-IMG_7013.jpg",
+        "alt": "A black-and-white portrait of a man and woman wearing glasses.",
+        "caption": "The people at the beginning",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/first-chap-IMG-20200417-WA0004.jpg",
+        "alt": "An older black-and-white family photograph outdoors.",
+        "caption": "The early years, together",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/first-chap-IMG-20200418-WA0023.jpg",
+        "alt": "A black-and-white photograph of an older woman standing with two children outdoors.",
+        "caption": "A little moment from home",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/first-chap-20140702_203217.jpg",
+        "alt": "An old family photograph of a woman playing a stringed instrument with a child beside her.",
+        "caption": "A little music",
+        "detail": "My Roots"
+      },
       {
         "src": "photos/web/IMG_8307.jpg",
         "alt": "An older man seated with two children.",
         "caption": "The early pages",
-        "detail": "Formative years & family"
+        "detail": "My Roots"
       },
       {
         "src": "photos/web/IMG_8308.jpg",
         "alt": "Two young people sitting together outdoors.",
         "caption": "A moment outdoors",
-        "detail": "Formative years & family"
+        "detail": "My Roots"
       },
       {
         "src": "photos/web/IMG_8305.jpg",
         "alt": "A family gathered around a traditional ceremony.",
         "caption": "Family traditions",
-        "detail": "Formative years & family"
+        "detail": "My Roots"
       },
       {
         "src": "photos/web/IMG_8310.jpg",
         "alt": "A large family group posing together indoors.",
         "caption": "Everyone together",
-        "detail": "Formative years & family"
-      },
-      {
-        "src": "photos/web/IMG_8306.jpg",
-        "alt": "A woman seated on the floor playing a stringed instrument.",
-        "caption": "A little music",
-        "detail": "Formative years & family"
-      },
-      {
-        "src": "photos/web/IMG_8312.jpg",
-        "alt": "Two men standing behind a seated older woman.",
-        "caption": "Across generations",
-        "detail": "Formative years & family"
-      },
-      {
-        "src": "photos/web/IMG_8311.jpg",
-        "alt": "Four older women sitting together.",
-        "caption": "Faces we hold close",
-        "detail": "Formative years & family"
+        "detail": "My Roots"
       },
       {
         "src": "photos/web/IMG_8313.jpg",
         "alt": "A seated older woman wearing a sari.",
         "caption": "A portrait to keep",
-        "detail": "Formative years & family"
-      },
-      {
-        "src": "photos/web/IMG_8314.jpg",
-        "alt": "A studio portrait of a young woman.",
-        "caption": "From the family album",
-        "detail": "Formative years & family"
+        "detail": "My Roots"
       },
       {
         "src": "photos/web/IMG_8309.jpg",
         "alt": "Three family members standing together outdoors.",
-        "caption": "Together, outdoors",
-        "detail": "Formative years & family"
+        "caption": "Some of My Fav People",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/IMG_8334.jpg",
+        "alt": "A group of family and friends gathered among plants outdoors.",
+        "caption": "Family, all together",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/IMG_8333.jpg",
+        "alt": "Family members taking part in a traditional ceremony.",
+        "caption": "A family gathering",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/IMG_8350.jpg",
+        "alt": "Two older men standing together outdoors in traditional clothing.",
+        "caption": "Side by side",
+        "detail": "My Roots"
+      },
+      {
+        "src": "photos/web/IMG_8351.jpg",
+        "alt": "Family members gathered during a flower-filled ceremony.",
+        "caption": "A family celebration",
+        "detail": "My Roots"
       }
     ]
   },
@@ -79,9 +109,9 @@ window.MEMORIES = [
     "note": "A whole chapter of belonging.",
     "photos": [
       {
-        "src": "photos/web/IMG_8334.jpg",
-        "alt": "A group of family and friends gathered among plants outdoors.",
-        "caption": "The Asha Kiran days",
+        "src": "photos/web/IMG_8323.jpg",
+        "alt": "A couple seated indoors with a black dog.",
+        "caption": "Four-legged family, too",
         "detail": "Life at Asha Kiran"
       },
       {
@@ -111,7 +141,7 @@ window.MEMORIES = [
       {
         "src": "photos/web/IMG_8322.jpg",
         "alt": "A man and woman standing together outside a doorway.",
-        "caption": "Just the two of you",
+        "caption": "Friends",
         "detail": "Life at Asha Kiran"
       },
       {
@@ -124,24 +154,6 @@ window.MEMORIES = [
         "src": "photos/web/IMG_8330.jpg",
         "alt": "Two women smiling together beside a bookshelf.",
         "caption": "Smiles from home",
-        "detail": "Life at Asha Kiran"
-      },
-      {
-        "src": "photos/web/IMG_8323.jpg",
-        "alt": "A couple seated indoors with a black dog.",
-        "caption": "Four-legged family, too",
-        "detail": "Life at Asha Kiran"
-      },
-      {
-        "src": "photos/web/IMG_8327.jpg",
-        "alt": "A black dog sitting on a tiled floor.",
-        "caption": "A very good companion",
-        "detail": "Life at Asha Kiran"
-      },
-      {
-        "src": "photos/web/IMG_8315.jpg",
-        "alt": "A young person in traditional dance costume posing outdoors.",
-        "caption": "Dressed for the occasion",
         "detail": "Life at Asha Kiran"
       },
       {
@@ -159,20 +171,54 @@ window.MEMORIES = [
       {
         "src": "photos/web/IMG_8332.jpg",
         "alt": "A young man wearing glasses during a traditional ceremony.",
-        "caption": "Traditions to carry with you",
-        "detail": "Life at Asha Kiran"
-      },
-      {
-        "src": "photos/web/IMG_8333.jpg",
-        "alt": "Family members taking part in a traditional ceremony.",
-        "caption": "A family gathering",
+        "caption": "A Moment of Strength",
         "detail": "Life at Asha Kiran"
       },
       {
         "src": "photos/web/IMG_8324.jpg",
         "alt": "Four family members standing together outdoors.",
-        "caption": "The people who made it home",
+        "caption": "Neighbors",
         "detail": "Life at Asha Kiran"
+      }
+    ]
+  },
+  {
+    "id": "us-ready",
+    "label": "US ready",
+    "title": "Ready for the",
+    "emphasis": "next chapter.",
+    "message": "The US-ready years. A new chapter ahead, with the people you love always part of the story.",
+    "note": "New beginnings, familiar love.",
+    "photos": [
+      {
+        "src": "photos/web/IMG_8342.jpg",
+        "alt": "A family group posing around a seated man indoors.",
+        "caption": "Before the next adventure",
+        "detail": "US ready"
+      },
+      {
+        "src": "photos/web/IMG_8343.jpg",
+        "alt": "Three men seated together at a dining table.",
+        "caption": "Around the table",
+        "detail": "US ready"
+      },
+      {
+        "src": "photos/web/IMG_8345.jpg",
+        "alt": "A man in a yellow jacket posing outdoors beside water.",
+        "caption": "A world ahead",
+        "detail": "US ready"
+      },
+      {
+        "src": "photos/web/IMG_8346.jpg",
+        "alt": "A man in a yellow jacket standing outdoors at night.",
+        "caption": "Landed in the US",
+        "detail": "US ready"
+      },
+      {
+        "src": "photos/web/IMG_8347.jpg",
+        "alt": "Two people posing together outside a temple entrance.",
+        "caption": "A Sacred Moment",
+        "detail": "US ready"
       }
     ]
   },
@@ -217,7 +263,7 @@ window.MEMORIES = [
       {
         "src": "photos/web/IMG_8339.jpg",
         "alt": "People gathered around a seated young man during a ceremony.",
-        "caption": "A gathering to remember",
+        "caption": "Thread Ceremony",
         "detail": "College life"
       },
       {
@@ -225,86 +271,6 @@ window.MEMORIES = [
         "alt": "Two people embracing in a doorway.",
         "caption": "A moment worth keeping",
         "detail": "College life"
-      }
-    ]
-  },
-  {
-    "id": "us-ready",
-    "label": "US ready",
-    "title": "Ready for the",
-    "emphasis": "next chapter.",
-    "message": "The US-ready years. A new chapter ahead, with the people you love always part of the story.",
-    "note": "New beginnings, familiar love.",
-    "photos": [
-      {
-        "src": "photos/web/IMG_8342.jpg",
-        "alt": "A family group posing around a seated man indoors.",
-        "caption": "Before the next adventure",
-        "detail": "US ready"
-      },
-      {
-        "src": "photos/web/IMG_8343.jpg",
-        "alt": "Three men seated together at a dining table.",
-        "caption": "Around the table",
-        "detail": "US ready"
-      },
-      {
-        "src": "photos/web/IMG_8345.jpg",
-        "alt": "A man in a yellow jacket posing outdoors beside water.",
-        "caption": "A world ahead",
-        "detail": "US ready"
-      },
-      {
-        "src": "photos/web/IMG_8346.jpg",
-        "alt": "A man in a yellow jacket standing outdoors at night.",
-        "caption": "Out into the evening",
-        "detail": "US ready"
-      },
-      {
-        "src": "photos/web/IMG_8347.jpg",
-        "alt": "Two people posing together outside a temple entrance.",
-        "caption": "A moment along the way",
-        "detail": "US ready"
-      }
-    ]
-  },
-  {
-    "id": "thatha",
-    "label": "Thatha",
-    "title": "So much love,",
-    "emphasis": "in these pages.",
-    "message": "A few moments with Thatha. Familiar expressions, family gatherings, and the love that connects these pages.",
-    "note": "Close to our hearts.",
-    "photos": [
-      {
-        "src": "photos/web/IMG_8352.jpg",
-        "alt": "A portrait of an older man wearing a suit and tie.",
-        "caption": "A portrait of Thatha",
-        "detail": "Thatha"
-      },
-      {
-        "src": "photos/web/IMG_8348.jpg",
-        "alt": "An older man standing in a leafy garden.",
-        "caption": "A quiet moment outdoors",
-        "detail": "Thatha"
-      },
-      {
-        "src": "photos/web/IMG_8349.jpg",
-        "alt": "An older man in a red shirt seated at a table with food.",
-        "caption": "A moment at the table",
-        "detail": "Thatha"
-      },
-      {
-        "src": "photos/web/IMG_8350.jpg",
-        "alt": "Two older men standing together outdoors in traditional clothing.",
-        "caption": "Side by side",
-        "detail": "Thatha"
-      },
-      {
-        "src": "photos/web/IMG_8351.jpg",
-        "alt": "Family members gathered during a flower-filled ceremony.",
-        "caption": "Together with family",
-        "detail": "Thatha"
       }
     ]
   },
@@ -317,21 +283,9 @@ window.MEMORIES = [
     "note": "A whole family of love for you.",
     "photos": [
       {
-        "src": "photos/web/IMG_8354.jpg",
-        "alt": "A family portrait with a baby and an older woman.",
-        "caption": "A new little chapter",
-        "detail": "Our family"
-      },
-      {
         "src": "photos/web/IMG_8353.jpg",
         "alt": "A multigenerational family portrait with a baby.",
         "caption": "All the generations",
-        "detail": "Our family"
-      },
-      {
-        "src": "photos/web/IMG_8355.jpg",
-        "alt": "A baby seated among soft toys.",
-        "caption": "The littlest smiles",
         "detail": "Our family"
       },
       {
@@ -353,24 +307,6 @@ window.MEMORIES = [
         "detail": "Our family"
       },
       {
-        "src": "photos/web/IMG_8364.jpg",
-        "alt": "A studio portrait of two small children.",
-        "caption": "Growing up together",
-        "detail": "Our family"
-      },
-      {
-        "src": "photos/web/IMG_8358.jpg",
-        "alt": "A young boy smiling in an outdoor portrait.",
-        "caption": "That little smile",
-        "detail": "Our family"
-      },
-      {
-        "src": "photos/web/IMG_8359.jpg",
-        "alt": "Two boys in striped shirts posing outdoors.",
-        "caption": "Side by side",
-        "detail": "Our family"
-      },
-      {
         "src": "photos/web/IMG_8360.jpg",
         "alt": "Two boys smiling together beside a wooden bench.",
         "caption": "A little older, still together",
@@ -383,10 +319,74 @@ window.MEMORIES = [
         "detail": "Our family"
       },
       {
-        "src": "photos/web/IMG_8362.jpg",
-        "alt": "A smiling man in traditional white clothing standing indoors.",
-        "caption": "And always, you",
+        "src": "photos/web/last-but-one-upe5191.jpg",
+        "alt": "A woman and child seated beside an older woman.",
+        "caption": "Three generations, one frame",
         "detail": "Our family"
+      },
+      {
+        "src": "photos/web/last-but-one-paati-rahul-4.jpg",
+        "alt": "An older woman holding a small child.",
+        "caption": "Held with love",
+        "detail": "Our family"
+      },
+      {
+        "src": "photos/web/last-but-one-05.jpg",
+        "alt": "Women and children gathered together on a sofa.",
+        "caption": "All the generations",
+        "detail": "Our family"
+      },
+      {
+        "src": "photos/web/last-but-one-23.jpg",
+        "alt": "Two older women smiling together with three children.",
+        "caption": "A lap full of memories",
+        "detail": "Our family"
+      },
+      {
+        "src": "photos/web/last-but-one-test.jpg",
+        "alt": "Two grandparents holding a small child in front of a birthday banner.",
+        "caption": "A little birthday love",
+        "detail": "Our family"
+      },
+      {
+        "src": "photos/web/last-but-one-DSC05655.jpg",
+        "alt": "A family group smiling together indoors.",
+        "caption": "Our family, together",
+        "detail": "Our family"
+      },
+      {
+        "src": "photos/web/f-and-L-IMG_3974.jpg",
+        "alt": "A person in a racing suit standing beside a blue number 2 NASCAR car at a racetrack.",
+        "caption": "One more lap, one more memory",
+        "detail": "Our family"
+      }
+    ]
+  },
+  {
+    "id": "thatha",
+    "label": "Thatha",
+    "title": "Our roots.",
+    "emphasis": "Our love.",
+    "message": "Thatha, so much of our family’s story begins with you. These photographs hold moments we’re grateful to share, and love that brings us together. We’re thinking of you, wishing you comfort and strength, and holding you close in our hearts.",
+    "note": "With all our love, Thatha.",
+    "photos": [
+      {
+        "src": "photos/web/IMG_8352.jpg",
+        "alt": "A portrait of an older man wearing a suit and tie.",
+        "caption": "A portrait of Thatha",
+        "detail": "Thatha"
+      },
+      {
+        "src": "photos/web/IMG_8348.jpg",
+        "alt": "An older man standing in a leafy garden.",
+        "caption": "A quiet moment outdoors",
+        "detail": "Thatha"
+      },
+      {
+        "src": "photos/web/IMG_8349.jpg",
+        "alt": "An older man in a red shirt seated at a table with food.",
+        "caption": "A moment at the table",
+        "detail": "Thatha"
       }
     ]
   }

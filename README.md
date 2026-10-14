@@ -4,26 +4,24 @@ A mobile-first birthday album with 55 unique family photographs. Swipe verticall
 
 Live site: https://rah-1.github.io/dad-bday/
 
-## Photo curation
+## Current chapter order
 
-Groups follow the original alphabetical filename sequence provided by the family:
+| Chapter | Photos |
+| --- | --- |
+| My Roots | 15 |
+| Life at Asha Kiran | 12 |
+| US ready | 5 |
+| College life | 7 |
+| Our family | 13 |
+| Thatha | 3 |
+| Total | 55 |
 
-| Chapter | Original group | Included |
-| --- | --- | --- |
-| Formative years & family | First 10 | 10 |
-| Life at Asha Kiran | Next 19 | 16 |
-| College life | Next 7 | 7 |
-| US ready | Next 5 | 5 |
-| Thatha | Next 5 | 5 |
-| Our family | Last 13 | 12 |
-| Total | 59 | 55 |
+See PHOTO-EDITS.md for Mom's original photo numbers, resolved moves, replacement choices, and captions. All 12 newly supplied images are included. The black-and-white family portrait opens the cover and My Roots. NASCAR ends Our family, immediately before the final Thatha chapter. The cover note reads “our roots.”
 
-Within groups, photos are arranged for narrative flow, without claiming exact dates. Thatha's chapter uses present, affectionate language. Omitted originals remain untouched: IMG_8321.jpg, IMG_8325.jpg, and IMG_8329.jpg overlap with other Asha Kiran portraits/gatherings; IMG_8366.jpg is a softer family snapshot overlapping with the other sibling photos.
-
-scripts/prepare_photos.py records the selection, order, captions, alt text, and rotation corrections. Run it with Python and Pillow to regenerate memories.js and photos/web/. Web copies are upright, resized to a maximum 1600 pixels, and saved without EXIF metadata. Original JPGs in photos/ stay local and are ignored by Git. Only the selected 55 web copies are published. The two cover photos reuse selections from the album.
+scripts/prepare_photos.py records the selection, order, captions, alt text, and rotation corrections. Run it with Python and Pillow to regenerate memories.js and photos/web/. Web copies are upright, resized to a maximum 1600 pixels, and saved without EXIF metadata. Original photos stay local and are ignored by Git. Originals are never modified or deleted.
 
 ## Preview and updates
 
-Run node server.js and visit http://localhost:5173. The site is static; pushing main updates GitHub Pages. When changing assets, update version query strings in index.html to refresh cached CSS and scripts.
+Run node server.js and visit http://localhost:5173. Pushing main updates GitHub Pages. When changing assets, update version query strings in index.html to refresh cached CSS and scripts.
 
-Gallery photos use object-fit: contain to preserve the full photograph. Google Fonts enhance typography online, with system fallbacks offline. No analytics, uploads, accounts, or backend are required.
+Gallery photos preserve the full frame. Google Fonts enhance typography online, with system fallbacks offline. No analytics, uploads, accounts, or backend are required.
