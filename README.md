@@ -25,3 +25,7 @@ scripts/prepare_photos.py records the selection, order, captions, alt text, and 
 Run node server.js and visit http://localhost:5173. Pushing main updates GitHub Pages. When changing assets, update version query strings in index.html to refresh cached CSS and scripts.
 
 Gallery photos preserve the full frame. Google Fonts enhance typography online, with system fallbacks offline. No analytics, uploads, accounts, or backend are required.
+
+## Soundtrack
+
+My Old Man by Zac Brown Band uses the official YouTube recording (aR-kZUL9e6o). The first tap on the opening page's Begin/Swipe button, or the persistent Music button, opens the player and requests playback. Phones may require tapping the native play control. The same looping player stays mounted across photo and chapter changes. Native controls provide pause/resume and volume; closing stops playback. On phones the player occupies its own bottom dock, separate from the album viewport.

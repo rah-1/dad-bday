@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#202923">
   <meta name="description" content="A little family album. Fifty-five years, countless memories, and so much love.">
   <title>55 years of you · For Dad</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -14,7 +14,7 @@
     <symbol id="hobby-cooking" viewBox="0 0 48 48"><path d="M9 24h30v7a10 10 0 0 1-10 10H19A10 10 0 0 1 9 31Zm0 3H5v7h5m29-7h4v7h-5M7 20h34M19 20v-3h10v3M15 12c-4-4 4-5 0-9m9 9c-4-4 4-5 0-9m9 9c-4-4 4-5 0-9"/></symbol>
     <symbol id="hobby-f1" viewBox="0 0 48 48"><path d="M13 41V7m0 1c9-5 15 5 25 0v22c-10 5-16-5-25 0"/><path class="checkers" d="M14 9h7v7h-7zm7 8h8v7h-8zm8-7h8v7h-8zm-15 14h7v6h-7zm15 0h8v6h-8z"/></symbol>
   </defs></svg>
-  <header class="masthead"><a href="#welcome" aria-label="Back to the birthday page">For Dad</a><span>A little album, a lot of love</span><button id="open-chapters" aria-label="Choose a chapter">Chapters <span aria-hidden="true">☰</span></button></header>
+  <header class="masthead"><a href="#welcome" aria-label="Back to the birthday page">For Dad</a><span>A little album, a lot of love</span><div class="header-actions"><button id="music-toggle" aria-label="Play My Old Man by Zac Brown Band" aria-controls="music-panel" aria-expanded="false"><span aria-hidden="true">♫</span> Music</button><button id="open-chapters" aria-label="Choose a chapter">Chapters <span aria-hidden="true">☰</span></button></div></header>
   <main id="album" tabindex="-1" aria-label="Dad's birthday album">
     <section class="chapter hero" id="welcome" aria-labelledby="birthday-title">
       <div class="hero-inner">
@@ -29,9 +29,10 @@
     <div id="memory-chapters"></div>
     <section class="chapter closing" id="with-love" aria-labelledby="closing-title"><div class="closing-inner"><p class="eyebrow">Today, and every day</p><h2 id="closing-title">You are<br><em>so loved.</em></h2><p>Happy 55th birthday, Dad.</p><p>We appreciate you. We’re thinking of you.<br>And we’re here with you, through it all.</p><div class="signoff">All our love, always.<span>Your family ♡</span></div><button class="begin" data-go="0">Back to the beginning <span aria-hidden="true">↑</span></button></div></section>
   </main>
+  <aside id="music-panel" class="music-panel" aria-label="Album soundtrack" hidden><div class="music-heading"><div><p>My Old Man</p><span>Zac Brown Band</span></div><button id="music-close" aria-label="Stop music and close player">×</button></div><div id="music-player"></div><p class="music-note">Your soundtrack, through every chapter.<br>Tap play if the song hasn’t started.</p><a href="https://www.youtube.com/watch?v=aR-kZUL9e6o" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a></aside>
   <nav class="chapter-rail" aria-label="Album chapters"></nav>
   <dialog id="chapter-menu"><div class="menu-top"><p class="eyebrow">The pages of your life</p><button id="close-chapters" aria-label="Close chapter menu">×</button></div><h2>Every chapter.<br><em>All our love.</em></h2><nav id="chapter-links" aria-label="Choose a chapter"></nav></dialog>
   <div id="announcement" class="sr-only" aria-live="polite"></div>
-  <script src="memories.js?v=7"></script><script src="app.js?v=7"></script>
+  <script src="memories.js?v=8"></script><script src="app.js?v=8"></script><script src="music.js?v=8"></script>
 </body>
 </html>
