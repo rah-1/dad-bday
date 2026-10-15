@@ -136,6 +136,12 @@ thatha.update(title='Our roots.', emphasis='Our love.',
     note='With all our love, Thatha.')
 GROUPS = [roots, asha, us, college, family, thatha]
 
+# The wedding photograph was 08/15 in My Roots; it is now 03/15.
+relabel(roots, 8305, 'A wedding to remember')
+wedding = next(photo for photo in roots['photos'] if photo[0] == 8305)
+roots['photos'].remove(wedding)
+roots['photos'].insert(2, wedding)
+
 output = ROOT / 'photos' / 'web'
 output.mkdir(exist_ok=True)
 used = []

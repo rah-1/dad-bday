@@ -38,3 +38,7 @@ Every photo in first-chap appears in My Roots. Every photo in last-but-one appea
 All explicitly moved and relabelled photos and all 12 new photos are included. The overlapping older photos omitted for the new selection are IMG_8306 (replaced by the newly supplied music photograph), IMG_8311, IMG_8312, IMG_8314 (older family portraits alongside the newly supplied Roots portraits); IMG_8315 (solo dance photo alongside the retained family dance photo), IMG_8327 (dog-only portrait alongside the retained photo with the dog); IMG_8354, IMG_8355, IMG_8358, IMG_8359, IMG_8364 (similar family/childhood portraits alongside the new family photographs). IMG_8362 is replaced per Mom's note. The four originally omitted files remain omitted. All original files remain untouched.
 
 The previous numeric instructions labelled “Chapter 5” describe US-ready photos: the yellow-jacket night portrait and temple photograph. Their captions are applied there. Swapping the old Chapters 3 and 4 puts US ready before College life; moving Thatha last puts Our family fifth and Thatha sixth.
+
+## Follow-up edit
+
+My Roots old 08/15 (IMG_8305.jpg) is now 03/15, captioned “A wedding to remember.” The closing birthday page has cake, candles, and balloon decorations and is signed by Mom, Rahul, Mihir, Socks, Tippy, Muffy, and Ace.

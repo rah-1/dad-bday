@@ -21,6 +21,12 @@ window.MEMORIES = [
         "detail": "My Roots"
       },
       {
+        "src": "photos/web/IMG_8305.jpg",
+        "alt": "A family gathered around a traditional ceremony.",
+        "caption": "A wedding to remember",
+        "detail": "My Roots"
+      },
+      {
         "src": "photos/web/first-chap-IMG-20200417-WA0004.jpg",
         "alt": "An older black-and-white family photograph outdoors.",
         "caption": "The early years, together",
@@ -48,12 +54,6 @@ window.MEMORIES = [
         "src": "photos/web/IMG_8308.jpg",
         "alt": "Two young people sitting together outdoors.",
         "caption": "A moment outdoors",
-        "detail": "My Roots"
-      },
-      {
-        "src": "photos/web/IMG_8305.jpg",
-        "alt": "A family gathered around a traditional ceremony.",
-        "caption": "Family traditions",
         "detail": "My Roots"
       },
       {
